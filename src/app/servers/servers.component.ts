@@ -11,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 allowNewServer = false ;
 ServerCreationStatus = 'No Server was  created!';
-serverName = 'Testserver';
+serverName = '';
+serverCreated = false;
   constructor() {
     setTimeout (() => { this.allowNewServer = true;
     } ,
@@ -20,6 +21,7 @@ serverName = 'Testserver';
 
   // tslint:disable-next-line:typedef
  onCreateServer() {
+    this.serverCreated = true;
     this.ServerCreationStatus = 'The server was created ! Name is' + this.serverName ;
 }
   ngOnInit(): void {
