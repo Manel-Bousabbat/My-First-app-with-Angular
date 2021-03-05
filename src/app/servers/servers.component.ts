@@ -20,7 +20,7 @@ serverName = 'Testserver';
 
   // tslint:disable-next-line:typedef
  onCreateServer() {
-    this.ServerCreationStatus = 'The server was created !' ;
+    this.ServerCreationStatus = 'The server was created ! Name is' + this.serverName ;
 }
   ngOnInit(): void {
   }
