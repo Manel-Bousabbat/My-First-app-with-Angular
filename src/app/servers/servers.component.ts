@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 allowNewServer = false ;
 ServerCreationStatus = 'No Server was  created!';
+serverName = '';
   constructor() {
     setTimeout (() => { this.allowNewServer = true;
     } ,
@@ -23,5 +24,9 @@ ServerCreationStatus = 'No Server was  created!';
 }
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line:typedef
+  onUpdateServerName(event: Event ){
+  // @ts-ignore
+    this.serverName = (event.target.value as HTMLInputElement);
+  }
 }
