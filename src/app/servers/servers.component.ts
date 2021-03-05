@@ -13,6 +13,7 @@ allowNewServer = false ;
 ServerCreationStatus = 'No Server was  created!';
 serverName = '';
 serverCreated = false;
+servers = ['TestServer', 'TestServer2' ] ;
   constructor() {
     setTimeout (() => { this.allowNewServer = true;
     } ,
@@ -22,6 +23,7 @@ serverCreated = false;
   // tslint:disable-next-line:typedef
  onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.ServerCreationStatus = 'The server was created ! Name is' + this.serverName ;
 }
   ngOnInit(): void {
